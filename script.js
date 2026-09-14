@@ -41,7 +41,7 @@
     };
 
     if (!data.nama || !data.kelas) {
-      tampilkanPesan('Nama dan kelas wajib diisi.', 'error');
+      tampilkanPesan('Nama dan kelas.', 'error');
       return;
     }
 
