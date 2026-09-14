@@ -1,0 +1,157 @@
+
+<style>
+  :root {
+    --hijau: #123b35;
+    --hijau-muda: #e2f3d9;
+    --teks: #17332e;
+    --garis: #dce5e1;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f2;
+    color: var(--teks);
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 520px;
+    margin: 20px auto;
+  }
+
+  .header {
+    background: var(--hijau);
+    color: white;
+    padding: 28px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .header h1 {
+    margin: 0 0 8px;
+  }
+
+  .header p {
+    margin: 0;
+    color: #cde0d7;
+  }
+
+  .card {
+    background: white;
+    padding: 28px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 20px #17332e12;
+  }
+
+  .waktu {
+    text-align: center;
+    background: var(--hijau-muda);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+  }
+
+  .waktu strong {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin: 16px 0 7px;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--garis);
+    border-radius: 9px;
+    font-size: 15px;
+    color: var(--teks);
+    background: white;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  .status {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .status label {
+    margin: 0;
+    padding: 13px;
+    border: 1px solid var(--garis);
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: normal;
+  }
+
+  .status input {
+    width: auto;
+    margin-right: 7px;
+  }
+
+  .status label:has(input:checked) {
+    background: var(--hijau-muda);
+    border-color: var(--hijau);
+    font-weight: bold;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 24px;
+    padding: 15px;
+    background: var(--hijau);
+    color: white;
+    border: 0;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  button:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+  }
+
+  #pesan {
+    margin-top: 16px;
+    text-align: center;
+    padding: 12px;
+    border-radius: 9px;
+    display: none;
+  }
+
+  #pesan.sukses {
+    display: block;
+    background: #e2f3d9;
+    color: #205c32;
+  }
+
+  #pesan.error {
+    display: block;
+    background: #fbe4e4;
+    color: #9c2f2f;
+  }
+
+  @media (max-width: 400px) {
+    body {
+      padding: 10px;
+    }
+
+    .header, .card {
+      padding: 20px;
+    }
+  }
+</style>
